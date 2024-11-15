@@ -20,7 +20,7 @@ _start:
     mov ebx, 1
     mov ecx, msg_notfound
     mov edx, len_notfound
-    int 0x80
+    int 80h
     jmp exit
 
 found:
@@ -28,9 +28,9 @@ found:
     mov ebx, 1
     mov ecx, msg_found
     mov edx, len_found
-    int 0x80
+    int 80h
 
 exit:
     mov eax, 1
     mov ebx, 0
-    int 0x80
+    int 80h
